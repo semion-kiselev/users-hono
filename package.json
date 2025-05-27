@@ -1,0 +1,31 @@
+{
+  "name": "users-hono",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "db:migrate": "node src/shared/db/migrate.js",
+    "db:create-admin": "node --env-file=.env src/shared/db/create-admin.js",
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hono/node-server": "1.14.3",
+    "bcrypt": "6.0.0",
+    "better-sqlite3": "11.10.0",
+    "hono": "4.7.10",
+    "http-status-codes": "2.3.0",
+    "zod": "3.25.30"
+  },
+  "devDependencies": {
+    "husky": "9.1.7",
+    "lint-staged": "16.0.0",
+    "prettier": "3.5.3",
+    "prettier-plugin-organize-imports": "4.1.0"
+  }
+}
