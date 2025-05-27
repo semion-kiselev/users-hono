@@ -6,8 +6,8 @@
   "scripts": {
     "db:migrate": "node src/shared/db/migrate.js",
     "db:create-admin": "node --env-file=.env src/shared/db/create-admin.js",
-    "start": "node server.js",
-    "dev": "node --watch server.js",
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
     "prepare": "husky"
   },
   "keywords": [],
